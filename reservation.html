@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Adamina|Chewy|Signika+Negative" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<header>
+    <div class="logo-bar">
+        <a href="index.html">
+            <img src="images/trlogo%20right.png" alt="Restaurant logo">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li class="menu-link"><a href="index.html">HOME</a></li>
+            <li class="menu-link"><a href="about.html">ABOUT</a></li>
+            <li class="menu-link"><a href="menu.html">MENU</a></li>
+            <li class="menu-link"><a href="contact.html">CONTACT</a>
+            <li class="menu-link"><a href="reservation.html">RESERVATION</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="reservation-form">
+<form method="post" action="index.html" onSubmit="return validateForm();">
+    <div style="width: 400px;">
+    </div>
+    <div style="padding-bottom: 18px;font-size : 21px;"><span class="reservation-text">Table Reservation</span> </div>
+    <div style="padding-bottom: 18px;font-size : 16px;"><span class="reservation-text-small">We would be glad to reserve a table for you at our restaurant!</span></div>
+    <div style="padding-bottom: 18px;">Name<span style="color: red;"> *</span><br/>
+        <input type="text" id="data_3" name="data_3" style="width : 350px; columns: 2;" class="form-control"/>
+    </div>
+    <div style="padding-bottom: 18px;">Phone<br/>
+        <input type="text" id="data_4" name="data_4" style="width : 350px;" class="form-control"/>
+    </div>
+    <div style="padding-bottom: 18px;">Email<br/>
+        <input type="text" id="data_10" name="data_10" style="width : 350px;" class="form-control"/>
+    </div>
+    <div style="padding-bottom: 18px;">Date<span style="color: red;"> *</span><br/>
+        <input type="text" id="data_11" name="data_11" style="width : 200px;" class="form-control"/>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.4.0/pikaday.min.js" type="text/javascript"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.4.0/css/pikaday.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">new Pikaday({ field: document.getElementById('data_11') });</script>
+    <div style="padding-bottom: 18px;">Time<span style="color: red;"> *</span><br/>
+        <input type="time" id="data_7" name="data_7" style="width : 200px;" class="form-control"/>
+    </div>
+    <div style="padding-bottom: 18px;">Number of Attendees<br/>
+        <select id="data_8" name="data_8" style="width : 200px;" class="form-control"><option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>10+ (Specify in Comments)</option>
+        </select>
+    </div>
+    <div style="padding-bottom: 18px;">Comments / Additional Requests<br/>
+        <textarea id="data_9" ${readonly} name="data_9" style="width : 350px;" rows="6" class="form-control"></textarea>
+    </div>
+    <div style="padding-bottom: 18px;"><input name="skip_Submit" value="Submit" type="submit"/></div>
+</form>
+</div>
+<script type="text/javascript">
+    function validateForm() {
+        if (isEmpty(document.getElementById('data_3').value.trim())) {
+            alert('Name is required!');
+            return false;
+        }
+        if (!validateEmail(document.getElementById('data_10').value.trim())) {
+            alert('Email must be a valid email address!');
+            return false;
+        }
+        if (isEmpty(document.getElementById('data_11').value.trim())) {
+            alert('Date is required!');
+            return false;
+        }
+        if (isEmpty(document.getElementById('data_7').value.trim())) {
+            alert('Time is required!');
+            return false;
+        }
+        return true;
+    }
+    function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+    function validateEmail(email) {
+        var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+        return isEmpty(email) || re.test(email);
+    }
+</script>
+</body>
+</html>

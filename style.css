@@ -1,0 +1,621 @@
+/*
+1. Reset
+2. Global styles
+3. Fonts
+4. Components
+5. Header
+6. Main sections
+7. Footer
+*/
+
+/*
+1. Reset
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+2. Global styles
+*/
+body {
+    background-color: #F4F3EF;
+    color: #62615c;
+    font-family: 'Signika Negative', sans-serif;
+    font-weight: 400;
+}
+
+section {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*
+3. Fonts
+*/
+p {
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: 'Signika Negative', serif;;
+}
+
+@media screen and (min-width: 1024px) {
+    p {
+        font-size: 18px;
+    }
+}
+
+/*
+5. Header
+*/
+header {
+    text-align: center;
+}
+
+.logo-bar {
+    background-color: black;
+    padding: 5px 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .logo-bar {
+        padding: 20px 0;
+    }
+}
+
+.logo-bar img {
+    max-width: 10%;
+}
+
+.top {
+    padding: 75px 0 40px;
+    color: #FFFFFF;
+    font-family: 'Chewy', sans-serif;
+    background: url('images/header_photo_small.jpg') 0 0;
+    background-size: cover;
+}
+
+@media screen and (min-width: 1024px) {
+    .top {
+        background: url('images/header_photo_big.jpg') 0 0;
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .top {
+        padding: 290px 0 180px;
+    }
+}
+
+.top h1 {
+    margin-bottom: 8px;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 1024px) {
+    .top h1 {
+        margin-bottom: 80px;
+        font-size: 160px;
+    }
+}
+
+.top p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+@media screen and (min-width: 1024px) {
+    .top p {
+        font-size: 54px;
+    }
+}
+
+.top a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 24px;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 3px;
+    font-size: 12px;
+    font-family: 'Chewy', sans-serif;
+}
+
+.top a:hover {
+    background-color: #FF5733;
+    color: #4C4731;
+}
+
+@media screen and (min-width: 1024px) {
+    .top a {
+        margin-top: 60px;
+        padding: 20px 60px;
+        font-size: 24px;
+    }
+}
+
+nav {
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 0 #dedede;
+}
+
+nav li {
+    padding: 15px 0;
+}
+
+@media screen and (min-width: 786px) {
+    nav li {
+        display: inline-block;
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    nav li {
+        padding: 60px 60px;
+    }
+}
+
+nav a {
+    color: #62615c;
+    font-size: 12px;
+}
+
+@media screen and (min-width: 1024px) {
+    nav a {
+        font-size: 24px;
+    }
+}
+
+/*
+6. Main sections styles
+*/
+.section-header {
+    padding: 42px 0 20px;
+    font-size: 36px;
+    color: #FF5733;
+
+}
+
+@media screen and (min-width: 1024px) {
+    .section-welcome h1 {
+        padding: 160px 0 70px;
+        font-size: 70px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .section-best-meals h1 {
+        margin: 25px 0 50px;
+        font-size: 34px;
+        padding: 0;
+    }
+}
+
+.welcome-first-image {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .welcome-first-image {
+        display: inline-block;
+    }
+}
+
+.section-best-meals {
+    padding-bottom: 60px;
+}
+
+.section-best-meals img {
+    padding-top: 85px;
+    max-width: 10%;
+}
+
+@media screen and (min-width: 1024px) {
+    .section-best-meals {
+        padding-bottom: 90px;
+    }
+}
+
+.section-offer {
+    padding: 40px 10% 50px;
+    background: url('images/desen_tlo.jpg') 0 0 repeat-x;
+}
+
+@media screen and (min-width: 1024px) {
+    .section-offer {
+        padding: 80px 20% 130px;
+    }
+}
+
+.section-offer-single img {
+    margin-bottom: 30px;
+    width: 40px;
+}
+
+@media screen and (min-width: 1024px) {
+    .section-offer-single img {
+        width: 70px;
+    }
+}
+
+.section-offer-single:first-child {
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1024px) {
+    .section-offer-single:first-child {
+        margin-bottom: 80px;
+    }
+}
+
+.section-offer p {
+    color: #FFFFFF;
+}
+
+.section-newsletter {
+    padding: 47px 0 26px;
+    background-color: #EFEEE9;
+}
+
+@media screen and (min-width: 1024px) {
+    .section-newsletter {
+        padding: 150px 0 26px;
+    }
+}
+
+.section-newsletter h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 24px;
+    font-size: 14px;
+    color: #A7A79B;
+}
+
+@media screen and (min-width: 1024px) {
+    .section-newsletter h2 {
+        font-size: 24px;
+    }
+}
+
+.section-newsletter form {
+    margin-bottom: 40px;
+
+}
+
+@media screen and (min-width: 1024px) {
+    .section-newsletter-wrapper {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.section-newsletter input {
+    display: block;
+    margin: 0 auto 12px;
+    padding-left: 20px;
+    width: 60%;
+    border: 1px solid #D2CFC6;
+    height: 30px;
+    line-height: 1.8;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 1024px) {
+    .section-newsletter input {
+        display: inline-block;
+        height: 60px;
+        font-size: 16px;
+    }
+}
+
+.section-newsletter button {
+    padding: 10px 40px;
+    border: 1px solid #A7A79B;
+    background-color: #A7A79B;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+@media screen and (min-width: 1024px) {
+    .section-newsletter button {
+        padding: 24px 90px;
+        margin-left: 10px;
+        font-size: 16px;
+    }
+}
+
+.social-buttons img {
+    margin: 0 5px;
+    max-width: 10%;
+}
+
+@media screen and (min-width: 1024px) {
+    .social-buttons {
+        margin-top: 90px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .section-contact-form h1 {
+        font-size: 70px;
+        margin: 60px 0 100px;
+    }
+}
+
+.section-contact-form-inner {
+    /*border-top: 1px dashed #A7A79B;*/
+    border-bottom: 1px dashed #A7A79B;
+    width: 80%;
+    margin: 0 auto;
+    padding: 18px 0 24px;
+}
+
+@media screen and (min-width: 1024px) {
+    .section-contact-form-inner {
+        /*border-top: 1px dashed #A7A79B;*/
+        border-bottom: 1px dashed #A7A79B;
+        width: 80%;
+        margin: 0 auto;
+        padding: 18px 0 70px;
+    }
+}
+
+.section-contact-form form {
+    margin-top: 15px;
+}
+
+.section-contact-form input,
+.section-contact-form textarea {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 700;
+    border: 1px solid #D2CFC6;
+}
+
+@media screen and (min-width: 1024px) {
+    .section-contact-form input,
+    .section-contact-form textarea {
+        width: 70%;
+    }
+}
+
+.section-contact-form input {
+    height: 28px;
+}
+
+@media screen and (min-width: 1024px) {
+    .section-contact-form input {
+        height: 60px;
+        font-size: 16px;
+    }
+}
+
+.section-contact-form textarea {
+    margin-bottom: 28px;
+    height: 300px;
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+    .section-contact-form textarea {
+        margin-bottom: 40px;
+    }
+}
+
+.section-contact-form button {
+    padding: 10px 42px;
+    background-color: #FF5733;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+@media screen and (min-width: 1024px) {
+    .section-contact-form button {
+        padding: 22px 80px;
+        font-size: 24px;
+    }
+}
+
+.section-map {
+    padding-top: 15px;
+    width: 65%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+    .section-map h1 {
+        font-size: 70px;
+        margin: 60px 0 100px;
+    }
+}
+
+.section-map p {
+    font-size: 30px;
+    margin: 60px 0 100px;
+
+}
+
+.section-about {
+    padding-bottom: 60px;
+}
+
+.section-about img {
+    padding-top: 85px;
+    max-width: 10%;
+}
+
+@media screen and (min-width: 1024px) {
+    .section-about {
+        padding-bottom: 90px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .section-menu h1 {
+        font-size: 40px;
+    }
+}
+
+.section-menu table {
+    margin: 0 auto;
+}
+
+td {
+    padding: 42px 0 20px;
+    font-size: 23px;
+    width: 1%;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details > summary:first-of-type {
+    list-style-type: none;
+}
+
+/*
+7. Footer
+*/
+footer {
+    padding: 20px 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: center;
+    color: #A7A79B;
+}
+
+@media screen and (min-width: 1024px) {
+    footer {
+        font-size: 16px;
+        padding: 40px 0;
+    }
+}
+span {
+    font-family: 'Adamina', serif;
+    color: #009daf;
+    font-size: 20px;
+}
+h1 {
+    font-family: 'Chewy', cursive;
+
+}
+.about-us {
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 22px;
+}
+.reservation-form{
+    padding-top: 25px;
+    padding-left: 30px;
+     font-family: 'Signika Negative', sans-serif;;
+    font-size: 20px;
+}
+.reservation-text{
+    font-family: 'Chewy', cursive;
+    font-size: 50px;
+    color: #FF5733;
+    text-align: center;
+}
+.reservation-text-small{
+    font-family: 'Chewy', cursive;
+    font-size: 30px;
+    color: #009daf;
+    text-align: center;
+}
+.menu-link {
+    color: gold;
+    font-family: 'Signika Negative', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 80px;
+    border-top: 8px solid transparent;
+    transition: border .3s;
+}
+
+.menu-link:hover {
+    border-top-color: darkgoldenrod;
+}
+
+.social-buttons li a:hover,
+.social-buttons li a:focus,
+.social-buttons li a:active {
+    background-color: #fed136;
+}
+.btn:focus,
+.btn:active,
+.btn.active,
+.btn:active:focus {
+    outline: none;
+}
+.reservation-form {
+    text-align: center;
+}
